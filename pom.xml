@@ -187,13 +187,14 @@
                          </sonar.host.url>
                   </proparaties>
          </profile>
+         <profile>
       <id>tomcat90</id>
       <properties>
         <tomcat.major-version>9</tomcat.major-version>
         <tomcat.version>9.0.0.M17</tomcat.version>
       </properties>
     </profile>
-   <--      
+        
     <profile>
       <id>tomcat85</id>
       <activation>
