@@ -145,7 +145,7 @@
           <artifactId>maven-war-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-      </plugins>
+-      </plugins>
     </pluginManagement>
     <plugins>
       <plugin>
@@ -169,20 +169,31 @@
       </plugin>
     </plugins>
   </build>
-
+-
   <properties>
     <cargo.maven.containerId>tomcat${tomcat.major-version}x</cargo.maven.containerId>
     <cargo.maven.containerUrl>http://archive.apache.org/dist/tomcat/tomcat-${tomcat.major-version}/v${tomcat.version}/bin/apache-tomcat-${tomcat.version}.zip</cargo.maven.containerUrl>
   </properties>
-
+-->
   <profiles>
     <profile>
+           <id>sonar</id>
+           <activation>
+                  <activeByDefault>true</activeByDefault>
+           </activation>
+           <proparaties>
+                  <sonar.host.url>
+                         http://localhost:9000
+                         </sonar.host.url>
+                  </proparaties>
+         </profile>
       <id>tomcat90</id>
       <properties>
         <tomcat.major-version>9</tomcat.major-version>
         <tomcat.version>9.0.0.M17</tomcat.version>
       </properties>
     </profile>
+   <--      
     <profile>
       <id>tomcat85</id>
       <activation>
@@ -200,6 +211,7 @@
         <tomcat.version>8.0.39</tomcat.version>
       </properties>
     </profile>
+         
     <profile>
       <id>tomcat70</id>
       <properties>
