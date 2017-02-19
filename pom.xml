@@ -48,7 +48,7 @@
     <system>Travis CI</system>
     <url>https://travis-ci.org/mybatis/jpetstore-6</url>
   </ciManagement>
-  <distributionManagement>
+<distributionManagement>
 <snapshotRepository>
 <id>nexus</id>
 <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
